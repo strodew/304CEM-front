@@ -17,7 +17,22 @@ export default class DisplayItems extends Component {
   }
   render() {
     return (
-      <div>
+      <div className='item_box'>
+        <div class='item'></div>
+        <div class='item'></div>
+        <div class='item'></div>
+        <div class='item'></div>
+        <div class='item'></div>
+        <div class='item'></div>
+        <div class='item'></div>
+        <div class='item'></div>
+        <div class='item'></div>
+        <div class='item'></div>
+        <div class='item'></div>
+        <div class='item'></div>
+        <div class='item'></div>
+        <div class='item'></div>
+        <div class='item'></div>
       </div>
     );
   }

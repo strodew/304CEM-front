@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./SlideBar.css";
 import { slide as Menu } from "react-burger-menu";
 import axios from "axios";
 

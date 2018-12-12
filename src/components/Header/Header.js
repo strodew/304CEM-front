@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./Header.css";
 
 class Header extends Component {
   handleSearchSubmit(event) {
@@ -8,7 +7,12 @@ class Header extends Component {
   }
 
   render() {
-    return <div className="header" />;
+    return (
+      <div className="header">
+        <p className='title'>Itemseller</p>
+        <a href ='/login' className='login_button'>Log In</a>
+      </div>
+    ) 
   }
 }
 export default Header;
