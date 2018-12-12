@@ -9,8 +9,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header/>
         <SlideBar/>
+        <Header/>
         <DisplayItems/>
       </div>        
     );

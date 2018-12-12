@@ -5,34 +5,30 @@ export default class DisplayItems extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      DisplayItems: null //ensure that DisplayItems is empty
+      listings: null //ensure that DisplayItems is empty
     }
   }
 
   async componentDidMount() {
-    const displayItems = (await axios.get("localhost:8080/displayItems")).data;
+    const listings = (await axios.get("http://localhost:8080/")).data;
     this.setState({
-      DisplayItems //update state of DisplayItems
+      listings //update state of DisplayItems
     })
+  console.log('testing')
+  console.log(this.state.listings)
   }
   render() {
     return (
-      <div className='item_box'>
-        <div class='item'></div>
-        <div class='item'></div>
-        <div class='item'></div>
-        <div class='item'></div>
-        <div class='item'></div>
-        <div class='item'></div>
-        <div class='item'></div>
-        <div class='item'></div>
-        <div class='item'></div>
-        <div class='item'></div>
-        <div class='item'></div>
-        <div class='item'></div>
-        <div class='item'></div>
-        <div class='item'></div>
-        <div class='item'></div>
+      <div className='item_container'>
+        {this.state.listings &&
+          this.state.listings.map(item => (
+            <div className='col-3 item'>
+              <h1>Description: {item.description}</h1>
+              <p>Location: {item.location}</p>
+              <p>Condition: {item.condition}</p>
+              <p>Price: £ {item.price}</p>
+            </div>
+          ))}
       </div>
     );
   }

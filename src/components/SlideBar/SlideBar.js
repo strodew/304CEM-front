@@ -33,8 +33,7 @@ export default class SlideBar extends Component {
     return (
       <Menu>
         <form>
-          <label>
-            Search:
+          <div className="row">
             <input
               type="text"
               name="searchBar"
@@ -42,15 +41,15 @@ export default class SlideBar extends Component {
                 this.updateSearchTxt(e.target.value);
               }}
             />
-          </label>
-          <button
-            type="submit"
-            onclick={() => {
-              this.submit();
-            }}
-          >
-            Search
-          </button>
+            <button
+              type="submit"
+              onclick={() => {
+                this.submit();
+              }}
+            >
+              Search
+            </button>
+          </div>
         </form>
       </Menu>
     );
