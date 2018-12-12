@@ -27,7 +27,7 @@ export default class SlideBar extends Component {
         "content-type": "multipart/form-data"
       }
     };
-    await axios.post("http://localhost:8080/whatever", formData, config);
+    await axios.post("localhost:8080/items", formData, config);
   }
 
   render() {
