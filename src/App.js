@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import './App.css'
-import Menu from './components/menu/Menu'
-import icon from './images/icon.svg'
+import SlideBar from './components/SlideBar/SlideBar'
 
 class App extends Component {
   render() {
     return (
-        <Menu></Menu>
+      <div>
+        <SlideBar/>
+      </div>
+        
     );
   }
 }
